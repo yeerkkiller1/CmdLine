@@ -66,9 +66,9 @@ namespace CmdLine
             currentTask = null;
         }
 
-        public void Run(string command, bool? print = null)
+        public List<string> Run(string command, bool? print = null)
         {
-            RunEnumerable(command, print).ToList();
+            return RunEnumerable(command, print).ToList();
         }
 
         public IEnumerable<string> RunEnumerable(string command, bool? print = null)
