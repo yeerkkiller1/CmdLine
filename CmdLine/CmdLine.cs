@@ -44,6 +44,9 @@ namespace CmdLine
 
             Task.Run(async () => await ReadLoop(process));
             Task.Run(async () => await ErrReadLoop(process));
+
+            //Run an ls to clear out some of the buffers, or something?
+            Run("ls");
         }
 
         public void RunAsTask(string command, Action<string> onOutput = null, bool? print = null)
