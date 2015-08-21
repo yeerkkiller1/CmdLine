@@ -25,7 +25,7 @@ namespace CmdLine
         Task currentTask;
         CancellationTokenSource taskCancel = new CancellationTokenSource();
 
-        public CommandLine(bool Print = true)
+        public CommandLine(bool Print = true, bool createNoWindow=false)
         {
             this.Print = Print;
 
@@ -36,6 +36,7 @@ namespace CmdLine
             startInfo.RedirectStandardInput = true;
             startInfo.RedirectStandardError = true;
             startInfo.UseShellExecute = false;
+            startInfo.CreateNoWindow = createNoWindow;
 
             process = Process.Start(startInfo);
             STDIN = process.StandardInput;
