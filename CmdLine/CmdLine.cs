@@ -60,7 +60,10 @@ namespace CmdLine
                 {
                     foreach (var output in outputs)
                     {
-                        onOutput(output);
+                        if (onOutput != null)
+                        {
+                            onOutput(output);
+                        }
                     }
                 }
                 catch (OperationCanceledException) { }
