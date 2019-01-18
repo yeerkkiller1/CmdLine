@@ -112,9 +112,11 @@ namespace CmdLine
             {
                 string line = await STDOUT.ReadLineAsync();
 
-                string cmdStr = "\\w:(\\\\[^<>:\"/\\|\\?\\*]+)*>";
+                string cmdStr = "\\w:(\\\\[^<>:\"/\\|\\?\\*]*)*>";
                 bool isCommandStart = new Regex(cmdStr + ".+$").IsMatch(line);
                 bool isCommandEnd = new Regex(cmdStr + "$").IsMatch(line);
+
+                //Console.WriteLine($"Read isCommandStart={isCommandStart}, isCommandEnd={isCommandEnd}, {line}");
 
                 if (isCommandStart)
                 {
