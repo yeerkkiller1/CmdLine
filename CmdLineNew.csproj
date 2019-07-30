@@ -7,6 +7,10 @@
     <FileVersion>1.0.4.0</FileVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Version>1.0.4</Version>
+    <PackageId>CmdLineInterface</PackageId>
+    <Authors>CmdLineInterface</Authors>
+    <Product>CmdLineInterface</Product>
+    <Description>See https://github.com/yeerkkiller1/CmdLine</Description>
   </PropertyGroup>
 
 </Project>
