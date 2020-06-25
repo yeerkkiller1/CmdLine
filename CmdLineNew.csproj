@@ -11,6 +11,14 @@
     <Authors>CmdLineInterface</Authors>
     <Product>CmdLineInterface</Product>
     <Description>See https://github.com/yeerkkiller1/CmdLine</Description>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
 </Project>
